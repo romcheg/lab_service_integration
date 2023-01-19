@@ -1,0 +1,11 @@
+version: '3'
+services:
+  database:
+    image: "docker.io/rabbitmq:management"
+    restart: always
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: admin
+    ports:
+      - "56721:5672"
+      - "15672:15672"
